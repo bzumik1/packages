@@ -1,0 +1,17 @@
+{
+	"ha-ubus": {
+		"description": "Read-only access for the Home Assistant OpenWrt (ubus) integration",
+		"read": {
+			"ubus": {
+				"hostapd.*": [ "get_clients" ],
+				"uci": [ "get" ],
+				"dhcp": [ "ipv4leases" ],
+				"file": [ "read" ]
+			},
+			"uci": [ "dhcp" ],
+			"file": {
+				"/tmp/dhcp.leases": [ "read" ]
+			}
+		}
+	}
+}
